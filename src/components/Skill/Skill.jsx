@@ -1,10 +1,53 @@
 import { Stack, Flex, Box, Image, Text } from "@chakra-ui/react";
-import React from "react";
-import { SkillDB } from "../../db/db";
+import React, { useState } from "react";
 import SkillBox from "./SkillBox";
 
 export default function Skill() {
-  console.log(SkillBox.length);
+  let baseImg = "../../../img/";
+  const [SkillDB, setSkillDB] = useState([
+    {
+      name: "Javascript",
+      src: "../../img/javascript.png"
+    },
+    {
+      name: "SQL",
+      src: "../../img/sql.png",
+    },
+    {
+      name: "css3",
+      src: "../../img/css.png",
+    },
+    {
+      name: "redux",
+      src: "../../img/redux.png",
+    },
+    {
+      name: "node.js",
+      src: "../../img/nodejs.png",
+    },
+    {
+      name: "prisma",
+      src: "../../img/prisma.png",
+    },
+    {
+      name: "express",
+      src: "../../img/express.png",
+    },
+    {
+      name: "sequelize",
+      src: "../../img/sequelize.png",
+    },
+    {
+      name: "postgresql",
+      src: "../../img/postgresql.png",
+    },
+    {
+      name: "mysql",
+      src: "../../img/mysql.png",
+    },
+  ]);
+
+  console.log(SkillDB);
   return (
     <Flex
       id="contact"

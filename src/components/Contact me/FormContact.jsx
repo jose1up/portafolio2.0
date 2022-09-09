@@ -32,6 +32,7 @@ export default function FormContact() {
   const { hasCopied, onCopy } = useClipboard("josealcaraz022@gmail.com");
   const form = useRef();
   const toast = useToast();
+  const colorIcon = useColorModeValue("whiteAlpha.900", "gray.900");
   const {
     register,
     handleSubmit,
@@ -108,7 +109,7 @@ export default function FormContact() {
                       bg: "blue.500",
                       color: "while",
                     }}
-                    
+                    color={colorIcon}
                     onClick={onCopy}
                     isRound
                   />
@@ -125,6 +126,7 @@ export default function FormContact() {
                       bg: "blue.500",
                       color: "gray.700",
                     }}
+                    color={colorIcon}
                     isRound
                   />
                 </Link>
@@ -139,6 +141,7 @@ export default function FormContact() {
                       bg: "blue.500",
                       color: "gray.700",
                     }}
+                    color={colorIcon}
                     isRound
                   />
                 </Link>
@@ -153,6 +156,7 @@ export default function FormContact() {
                       bg: "blue.500",
                       color: "while",
                     }}
+                    color={colorIcon}
                     isRound
                   />
                 </Link>

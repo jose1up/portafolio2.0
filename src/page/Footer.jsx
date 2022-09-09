@@ -9,6 +9,7 @@ import {
 import { Link } from "react-scroll";
 
 export default function Footer() {
+
   return (
     <Box>
       <Container

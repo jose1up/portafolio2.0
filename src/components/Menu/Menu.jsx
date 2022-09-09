@@ -21,13 +21,14 @@ import {
   Box,
   VStack,
   Flex,
+  useColorMode,
 } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import Particulas from "../../page/Particulas";
-
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 export default function Menu() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -53,6 +54,11 @@ export default function Menu() {
               fontSize="20"
               _hover={{ fontSize: "2xl" }}
             />
+            {colorMode === "light" ? (
+              <IconButton icon={<SunIcon />} onClick={toggleColorMode} />
+            ) : (
+              <IconButton icon={<MoonIcon />} onClick={toggleColorMode} />
+            )}
           </DrawerHeader>
           <DrawerBody bgColor="brand.900" pt="28">
             <VStack textAlign="center">

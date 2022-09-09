@@ -73,45 +73,4 @@ export const project = [
   },
 ];
 
-export const SkillDB = [
-  {
-    name: "Javascript",
-    src: "../../img/logos_javascript.png",
-  },
-  {
-    name: "SQL",
-    src: "../../img/sql.png",
-  },
-  {
-    name: "css3",
-    src: "../../img/css.png",
-  },
-  {
-    name: "redux",
-    src: "../../img/redux.png",
-  },
-  {
-    name: "node.js",
-    src: "../../img/nodejs.png",
-  },
-  {
-    name: "prisma",
-    src: "../../img/prisma.png",
-  },
-  {
-    name: "express",
-    src: "../../img/express.png",
-  },
-  {
-    name: "sequelize",
-    src: "../../img/sequelize.png",
-  },
-  {
-    name: "postgresql",
-    src: "../../img/postgresql.png",
-  },
-  {
-    name:"mysql",
-    src: "../../img/mysql.png"
-  }
-];
+

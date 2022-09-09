@@ -2,10 +2,11 @@ import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
-import { Stack } from "@chakra-ui/react";
+import { Stack, useColorMode } from "@chakra-ui/react";
 
 
 export default function Particulas() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -50,10 +51,10 @@ export default function Particulas() {
           },
           particles: {
             color: {
-              value: "#fa7921",
+               value: colorMode=="light" ?"#fa7921": "#000000",
             },
             links: {
-              color: "#ffffff",
+              color: colorMode=="light" ?"#ffffff": "#000000",
               distance: 150,
               enable: true,
               opacity: 0.5,
