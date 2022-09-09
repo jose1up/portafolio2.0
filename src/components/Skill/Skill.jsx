@@ -1,54 +1,50 @@
-import {  Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 import SkillBox from "./SkillBox";
-
-
-
 
 export default function Skill() {
   const [SkillDB, setSkillDB] = useState([
     {
       name: "Javascript",
-      src: "/javascript.png"
+      src: "./javascript.png?url",
     },
     {
       name: "SQL",
-      src: "../../img/sql.png",
+      src: "./sql.png?url",
     },
     {
       name: "css3",
-      src: "../../img/css.png",
+      src: "./css.png?url",
     },
     {
       name: "redux",
-      src: "../../img/redux.png",
+      src: "./redux.png?url",
     },
     {
       name: "node.js",
-      src: "../../../img/nodejs.png",
+      src: "./nodejs.png?url",
     },
     {
       name: "prisma",
-      src: "../../../img/prisma.png",
+      src: "./prisma.png?url",
     },
     {
       name: "express",
-      src: "../../../img/express.png",
+      src: "./express.png?url",
     },
     {
       name: "sequelize",
-      src: "../../../img/sequelize.png",
+      src: "./sequelize.png?url",
     },
     {
       name: "postgresql",
-      src: "../../../img/postgresql.png",
+      src: "./postgresql.png?url",
     },
     {
       name: "mysql",
-      src: "../../../img/mysql.png",
+      src: "./mysql.png?url",
     },
   ]);
-
 
   return (
     <Flex
@@ -64,7 +60,7 @@ export default function Skill() {
       pb="10"
     >
       {SkillDB.map((skill, index) => {
-        return <SkillBox key={index} name={skill.name} src={skill.src}  />;
+        return <SkillBox key={index} name={skill.name} src={skill.src} />;
       })}
     </Flex>
   );
