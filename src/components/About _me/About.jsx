@@ -1,8 +1,16 @@
-import { Flex, Box, Image, Text, Link, IconButton } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Image,
+  Text,
+  Link,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 import photoPerfil from "../../../img/photoPerfil.jpg";
 import s from "./About.module.css";
-import { FaQuoteLeft,FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -18,8 +26,13 @@ export default function About() {
 
       <Box p={6}>
         <Box>
-          <IconButton icon={<FaQuoteLeft />} color="white" cursor={"default"} />
-          <Text mt={2} fontSize="sm" color="white" className={s.span} >
+          <IconButton icon={<FaQuoteLeft />} cursor={"default"} />
+          <Text
+            mt={2}
+            fontSize="sm"
+            color={useColorModeValue("whiteAlpha.900", "whiteAlpha.500")}
+            className={s.span}
+          >
             Hola me presento soy un desarrollador full stack MERN, actualmente
             me encuentro en búsqueda en mi primer empleo en el mundo it. Soy un
             apasionado de la tecnología como muchas ganas de empezar a demostrar
@@ -44,10 +57,7 @@ export default function About() {
               <Link
                 mx={2}
                 fontWeight="bold"
-                color="gray.700"
-                _dark={{
-                  color: "gray.200",
-                }}
+                color={useColorModeValue("whiteAlpha.900", "whiteAlpha.500")}
               >
                 Jose Miguel Alcaraz
               </Link>

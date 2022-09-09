@@ -22,6 +22,7 @@ import {
   VStack,
   Flex,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 import React from "react";
@@ -47,7 +48,10 @@ export default function Menu() {
         finalFocusRef={btnRef}
       >
         <DrawerContent>
-          <DrawerHeader size="xs" bgColor="brand.900">
+          <DrawerHeader
+            size="xs"
+            bgColor={useColorModeValue("brand.900", "gray.700")}
+          >
             <DrawerCloseButton
               m={2.5}
               color="whiteAlpha.900"
@@ -60,7 +64,10 @@ export default function Menu() {
               <IconButton icon={<MoonIcon />} onClick={toggleColorMode} />
             )}
           </DrawerHeader>
-          <DrawerBody bgColor="brand.900" pt="28">
+          <DrawerBody
+            bgColor={useColorModeValue("brand.900", "gray.700")}
+            pt="28"
+          >
             <VStack textAlign="center">
               <Link to="home" smooth={true} duration={500}>
                 <Text

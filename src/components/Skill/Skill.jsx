@@ -1,13 +1,15 @@
-import { Stack, Flex, Box, Image, Text } from "@chakra-ui/react";
+import {  Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 import SkillBox from "./SkillBox";
 
+
+
+
 export default function Skill() {
-  let baseImg = "../../../img/";
   const [SkillDB, setSkillDB] = useState([
     {
       name: "Javascript",
-      src: "../../img/javascript.png"
+      src: "/javascript.png"
     },
     {
       name: "SQL",
@@ -23,35 +25,34 @@ export default function Skill() {
     },
     {
       name: "node.js",
-      src: "../../img/nodejs.png",
+      src: "../../../img/nodejs.png",
     },
     {
       name: "prisma",
-      src: "../../img/prisma.png",
+      src: "../../../img/prisma.png",
     },
     {
       name: "express",
-      src: "../../img/express.png",
+      src: "../../../img/express.png",
     },
     {
       name: "sequelize",
-      src: "../../img/sequelize.png",
+      src: "../../../img/sequelize.png",
     },
     {
       name: "postgresql",
-      src: "../../img/postgresql.png",
+      src: "../../../img/postgresql.png",
     },
     {
       name: "mysql",
-      src: "../../img/mysql.png",
+      src: "../../../img/mysql.png",
     },
   ]);
 
-  console.log(SkillDB);
+
   return (
     <Flex
       id="contact"
-      bg="brand.600"
       alignItems="center"
       direction={"column"}
       justifyContent="flex-start"

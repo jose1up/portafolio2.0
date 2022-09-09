@@ -29,6 +29,7 @@ const templateID = import.meta.env.VITE_TEMPLATE_ID_EMAIL_JS;
 const templateParams = import.meta.env.VITE_TEMPLATE_PARAMS_EMAIL_JS;
 
 export default function FormContact() {
+  const colorFont = useColorModeValue("whiteAlpha.900", "gray.900");
   const { hasCopied, onCopy } = useClipboard("josealcaraz022@gmail.com");
   const form = useRef();
   const toast = useToast();
@@ -63,8 +64,6 @@ export default function FormContact() {
       align="center"
       justify="center"
       id="contact"
-      // borderRadius="xl"
-      // boxShadow={"dark-lg"}
       mt="15"
       mb="15"
     >
@@ -80,6 +79,7 @@ export default function FormContact() {
                 base: "4xl",
                 md: "5xl",
               }}
+              color={colorIcon}
               fontWeight="extrabold"
             >
               Get in Touch
@@ -171,9 +171,8 @@ export default function FormContact() {
               >
                 <VStack spacing={5}>
                   <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-                    <FormControl>
+                    <FormControl color={colorFont}>
                       <FormLabel>Name</FormLabel>
-
                       <InputGroup>
                         <InputLeftElement children={<BsPerson />} />
                         <Input
@@ -188,8 +187,7 @@ export default function FormContact() {
                         </Text>
                       </InputGroup>
                     </FormControl>
-
-                    <FormControl>
+                    <FormControl color={colorFont}>
                       <FormLabel>Email</FormLabel>
 
                       <InputGroup>
@@ -207,7 +205,7 @@ export default function FormContact() {
                       </InputGroup>
                     </FormControl>
 
-                    <FormControl>
+                    <FormControl color={colorFont}>
                       <FormLabel>Message</FormLabel>
 
                       <Textarea
@@ -227,8 +225,8 @@ export default function FormContact() {
                       mt={"2"}
                       type="submit"
                       colorScheme="blue"
-                      bg="blue.400"
-                      color="white"
+                      bg={useColorModeValue("blue.400", "gray.300")}
+                      color={colorFont}
                       _hover={{
                         bg: "blue.500",
                       }}
