@@ -18,7 +18,7 @@ export default function SkillBox({ name, src }) {
       w={"2xs"}
       minW={"auto"}
     >
-      <Image src={src} borderRadius="md" />
+      <Image src={src} alt={name} borderRadius="md" />
       <Text
         ml={"2"}
         fontSize={{ base: "sm", md: "2xl" }}

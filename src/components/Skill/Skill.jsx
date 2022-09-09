@@ -63,7 +63,7 @@ export default function Skill() {
       pb="10"
     >
       {SkillDB.map((skill, index) => {
-        return <SkillBox key={index} name={skill.name} src={skill.src} />;
+        return <SkillBox key={index} name={skill.name} src={skill.src}  />;
       })}
     </Flex>
   );
