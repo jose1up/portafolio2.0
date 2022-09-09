@@ -2,6 +2,7 @@ import { Box, Center, Stack, Text, Link } from "@chakra-ui/react";
 import React from "react";
 import "animate.css";
 import "./Home.css";
+import Particulas from "./Particulas";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <Text
         className="animate__animated animate__backInRight"
         fontSize="7xl"
-        fontWeight="bold"
+        fontWeight="extrabold"
         color="brand.100"
       >
         Jose Miguel Alcaraz

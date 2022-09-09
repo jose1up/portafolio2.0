@@ -25,6 +25,7 @@ import {
 import { Link } from "react-scroll";
 import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import Particulas from "../../page/Particulas";
 
 export default function Menu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -77,22 +78,26 @@ export default function Menu() {
                   Project
                 </Text>
               </Link>
-              <Text
-                fontSize="4xl"
-                color="whiteAlpha.900"
-                cursor="pointer"
-                _hover={{ color: "brand.100", fontSize: "5xl" }}
-              >
-                About me
-              </Text>
-              <Text
-                fontSize="4xl"
-                color="whiteAlpha.900"
-                cursor="pointer"
-                _hover={{ color: "brand.100", fontSize: "5xl" }}
-              >
-                Skill
-              </Text>
+              <Link to="About" smooth={true} duration={500}>
+                <Text
+                  fontSize="4xl"
+                  color="whiteAlpha.900"
+                  cursor="pointer"
+                  _hover={{ color: "brand.100", fontSize: "5xl" }}
+                >
+                  About me
+                </Text>
+              </Link>
+              <Link to="skill" smooth={true} duration={500}>
+                <Text
+                  fontSize="4xl"
+                  color="whiteAlpha.900"
+                  cursor="pointer"
+                  _hover={{ color: "brand.100", fontSize: "5xl" }}
+                >
+                  Skill
+                </Text>
+              </Link>
               <Link to="contact_me" smooth={true} duration={500}>
                 <Text
                   fontSize="4xl"

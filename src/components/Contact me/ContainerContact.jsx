@@ -10,6 +10,7 @@ export default function ContainerContact() {
       display="flex"
       align="center"
       justify="center"
+      m="10"
     >
       <FormContact/>
     </Stack>

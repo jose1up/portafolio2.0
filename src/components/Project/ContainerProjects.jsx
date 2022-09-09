@@ -1,6 +1,5 @@
 import { Container, Stack, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import Carousel from "react-elastic-carousel";
 import { project } from "../../db/db";
 
 export default function ContainerProjects() {

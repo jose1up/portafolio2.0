@@ -4,8 +4,16 @@ export const project = [
     deploy: false,
     img: "../../img/App-pokemon.png",
     url: "https://youtu.be/uBZSd2uPU9U",
-    tech: ["sequelize", "Node.js", "postgresql", "express js","react js", "css 3", "html 5", "redux"],
-  
+    tech: [
+      "sequelize",
+      "Node.js",
+      "postgresql",
+      "express js",
+      "react js",
+      "css 3",
+      "html 5",
+      "redux",
+    ],
   },
   {
     name: "Bookflix",
@@ -19,9 +27,12 @@ export const project = [
       "express js",
       "jwt",
       "store Firebase",
-      "react js", "chakra ui", "html 5", "redux", "chakra ui"
+      "react js",
+      "chakra ui",
+      "html 5",
+      "redux",
+      "chakra ui",
     ],
-    
   },
   {
     name: "ToDo",
@@ -60,4 +71,47 @@ export const project = [
       "bootstrap",
     ],
   },
+];
+
+export const SkillDB = [
+  {
+    name: "Javascript",
+    src: "../../img/logos_javascript.png",
+  },
+  {
+    name: "SQL",
+    src: "../../img/sql.png",
+  },
+  {
+    name: "css3",
+    src: "../../img/css.png",
+  },
+  {
+    name: "redux",
+    src: "../../img/redux.png",
+  },
+  {
+    name: "node.js",
+    src: "../../img/nodejs.png",
+  },
+  {
+    name: "prisma",
+    src: "../../img/prisma.png",
+  },
+  {
+    name: "express",
+    src: "../../img/express.png",
+  },
+  {
+    name: "sequelize",
+    src: "../../img/sequelize.png",
+  },
+  {
+    name: "postgresql",
+    src: "../../img/postgresql.png",
+  },
+  {
+    name:"mysql",
+    src: "../../img/mysql.png"
+  }
 ];

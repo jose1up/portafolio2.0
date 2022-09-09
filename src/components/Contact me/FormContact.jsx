@@ -16,6 +16,7 @@ import {
   Tooltip,
   useClipboard,
   useColorModeValue,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
@@ -23,22 +24,14 @@ import { BsGithub, BsLinkedin, BsPerson, BsWhatsapp } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
-
-const confetti = {
-  light: {
-    primary: "4299E1", // blue.400
-    secondary: "BEE3F8", // blue.100
-  },
-
-  dark: {
-    primary: "1A365D", // blue.900
-    secondary: "2A4365", // blue.800
-  },
-};
+const serviceID = import.meta.env.VITE_SERVICE_ID_EMAIL_JS;
+const templateID = import.meta.env.VITE_TEMPLATE_ID_EMAIL_JS;
+const templateParams = import.meta.env.VITE_TEMPLATE_PARAMS_EMAIL_JS;
 
 export default function FormContact() {
   const { hasCopied, onCopy } = useClipboard("josealcaraz022@gmail.com");
   const form = useRef();
+  const toast = useToast();
   const {
     register,
     handleSubmit,
@@ -47,45 +40,46 @@ export default function FormContact() {
   const onSubmit = (data, e) => {
     console.log(data);
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_19k9uad",
-        "template_gcb0tut",
-        form.current,
-        "u633044fVcxZKgl2-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(serviceID, templateID, form.current, templateParams).then(
+      (result) => {
+        toast({
+          title: "Send Message",
+          description: "We're sending your message with success.",
+          status: "success",
+          duration: 8000,
+          isClosable: true,
+        });
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
     <Flex
-      bg={useColorModeValue( "brand.600","gray.100",)}
+      bg="brand.600"
       align="center"
       justify="center"
       id="contact"
-      borderRadius="xl"
-      boxShadow={"dark-lg"}
+      // borderRadius="xl"
+      // boxShadow={"dark-lg"}
+      mt="15"
+      mb="15"
     >
       <Box
         borderRadius="lg"
-        m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
+        m={{ base: 5, md: 12, lg: 8 }}
+        p={{ base: 5, lg: 7.5 }}
       >
         <Box>
-          <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+          <VStack spacing={{ base: 2, md: 4, lg: 7 }}>
             <Heading
               fontSize={{
                 base: "4xl",
                 md: "5xl",
               }}
-              shadow="base"
+              fontWeight="extrabold"
             >
               Get in Touch
             </Heading>
@@ -112,8 +106,9 @@ export default function FormContact() {
                     icon={<MdEmail />}
                     _hover={{
                       bg: "blue.500",
-                      color: useColorModeValue("white","gray.700"),
+                      color: "while",
                     }}
+                    
                     onClick={onCopy}
                     isRound
                   />
@@ -128,7 +123,7 @@ export default function FormContact() {
                     icon={<BsGithub />}
                     _hover={{
                       bg: "blue.500",
-                      color: useColorModeValue( "gray.700","white"),
+                      color: "gray.700",
                     }}
                     isRound
                   />
@@ -142,7 +137,7 @@ export default function FormContact() {
                     icon={<BsWhatsapp size="28px" />}
                     _hover={{
                       bg: "blue.500",
-                      color: useColorModeValue("white", "gray.700"),
+                      color: "gray.700",
                     }}
                     isRound
                   />
@@ -156,7 +151,7 @@ export default function FormContact() {
                     icon={<BsLinkedin size="28px" />}
                     _hover={{
                       bg: "blue.500",
-                      color: useColorModeValue("gray.700", "white"),
+                      color: "while",
                     }}
                     isRound
                   />
@@ -164,11 +159,11 @@ export default function FormContact() {
               </Stack>
 
               <Box
-                bg={useColorModeValue("gray.700", "white")}
+                bg={"gray.700"}
                 borderRadius="lg"
                 p={10}
-                color={useColorModeValue("whiteAlpha.900", "gray.700")}
-                shadow="base"
+                color={"while"}
+                shadow="dark-lg"
               >
                 <VStack spacing={5}>
                   <form ref={form} onSubmit={handleSubmit(onSubmit)}>

@@ -1,14 +1,17 @@
 .animate__animated.animate__heartBeat {
   --animate-duration: 1s;
-  
 }
 
 
-.animate__animated.animate__bounceInLeft{
-    --animation-duration: 1s;
-    
+
+.animate__animated.animate__bounceInLeft {
+  --animation-duration: 1s;
 }
 
-.animate__animated.animate__backInDown{
-    --animation-duration: 1s
+
+
+.animate__animated.animate__backInDown {
+  --animation-duration: 1s;
 }
+
+
