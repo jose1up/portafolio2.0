@@ -51,7 +51,7 @@ export default function Particulas() {
           },
           particles: {
             color: {
-               value: colorMode=="light" ?"#fa7921": "#000000",
+               value: colorMode=="light" ?"#fa7921": "#2c5282",
             },
             links: {
               color: colorMode=="light" ?"#ffffff": "#000000",

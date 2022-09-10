@@ -19,7 +19,7 @@ export default function Home() {
         fontWeight="bold"
         color={colorFont}
         fontSize="2xl"
-        className="animate__animated animate__backInDown"
+        className="animate__animated animate__backInDown" 
       >
         Hi, Iam
       </Text>
@@ -28,6 +28,7 @@ export default function Home() {
         fontSize="7xl"
         fontWeight="extrabold"
         color={useColorModeValue("brand.100","blue.700")}
+        textShadow="dark-lg"
       >
         Jose Miguel Alcaraz
       </Text>

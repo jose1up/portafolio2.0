@@ -32,6 +32,7 @@ export default function Menu() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  let colorHover = useColorModeValue("brand.100", "blue.700");
 
   return (
     <Stack position="fixed" m="2" right="0" top="0" zIndex="1">
@@ -75,7 +76,7 @@ export default function Menu() {
                   fontSize="4xl"
                   color="whiteAlpha.900"
                   cursor="pointer"
-                  // _hover={{ color: "brand.100", fontSize: "5xl" }}
+                  _hover={{ color:colorHover, fontSize: "5xl" }}
                 >
                   Home
                 </Text>
@@ -86,7 +87,7 @@ export default function Menu() {
                   fontSize="4xl"
                   color="whiteAlpha.900"
                   cursor="pointer"
-                  // _hover={{ color: "brand.100", fontSize: "5xl" }}
+                  _hover={{ color:colorHover, fontSize: "5xl" }}
                 >
                   Project
                 </Text>
@@ -96,7 +97,7 @@ export default function Menu() {
                   fontSize="4xl"
                   color="whiteAlpha.900"
                   cursor="pointer"
-                  _hover={{ color: "brand.100", fontSize: "5xl" }}
+                  _hover={{ color:colorHover, fontSize: "5xl" }}
                 >
                   About me
                 </Text>
@@ -106,7 +107,7 @@ export default function Menu() {
                   fontSize="4xl"
                   color="whiteAlpha.900"
                   cursor="pointer"
-                  _hover={{ color: "brand.100", fontSize: "5xl" }}
+                  _hover={{color:colorHover, fontSize: "5xl" }}
                 >
                   Skill
                 </Text>
@@ -116,7 +117,7 @@ export default function Menu() {
                   fontSize="4xl"
                   color="whiteAlpha.900"
                   cursor="pointer"
-                  _hover={{ color: "brand.100", fontSize: "5xl" }}
+                  _hover={{ color:colorHover, fontSize: "5xl" }}
                 >
                   Contact me
                 </Text>

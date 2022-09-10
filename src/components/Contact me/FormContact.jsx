@@ -30,6 +30,7 @@ const templateParams = import.meta.env.VITE_TEMPLATE_PARAMS_EMAIL_JS;
 
 export default function FormContact() {
   const colorFont = useColorModeValue("whiteAlpha.900", "gray.900");
+  const IconHover = useColorModeValue("blue.500","gray.300")
   const { hasCopied, onCopy } = useClipboard("josealcaraz022@gmail.com");
   const form = useRef();
   const toast = useToast();
@@ -106,7 +107,7 @@ export default function FormContact() {
                     fontSize="3xl"
                     icon={<MdEmail />}
                     _hover={{
-                      bg: "blue.500",
+                      bg: IconHover,
                       color: "while",
                     }}
                     color={colorIcon}
@@ -123,7 +124,7 @@ export default function FormContact() {
                     fontSize="3xl"
                     icon={<BsGithub />}
                     _hover={{
-                      bg: "blue.500",
+                      bg: IconHover,
                       color: "gray.700",
                     }}
                     color={colorIcon}
@@ -138,7 +139,7 @@ export default function FormContact() {
                     size="lg"
                     icon={<BsWhatsapp size="28px" />}
                     _hover={{
-                      bg: "blue.500",
+                      bg: IconHover,
                       color: "gray.700",
                     }}
                     color={colorIcon}
@@ -153,7 +154,7 @@ export default function FormContact() {
                     size="lg"
                     icon={<BsLinkedin size="28px" />}
                     _hover={{
-                      bg: "blue.500",
+                      bg: IconHover,
                       color: "while",
                     }}
                     color={colorIcon}
