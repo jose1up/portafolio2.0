@@ -8,6 +8,7 @@ import SkillContainer from "./components/Skill/SkillContainer";
 import Particulas from "./page/Particulas";
 import Footer from "./page/Footer";
 
+
 function App() {
   const bg = useColorModeValue("brand.900", "gray.700");
   return (

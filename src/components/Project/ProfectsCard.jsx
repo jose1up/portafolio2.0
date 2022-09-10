@@ -1,62 +1,65 @@
-import React, { useId } from "react";
+import React from "react";
 import {
-  Box,
+  Text,
   Container,
-  Link,
-  Heading,
   Image,
   Badge,
   Button,
+  Link,
   Stack,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { v4 as uuidv4 } from "uuid";
 
-export default function ProfectsCard({ img, tech, url,name }) {
+export default function ProfectsCard({ img, tech, url, name }) {
   return (
     <Stack
+      
       w={{ base: "xs", md: "sm" }}
-      h={{ base: "xs", md: "sm" }}
-      bgColor="brand.800"
+      h={{ base: "sm", md: "lg" }}
+      bgColor="gray.900"
       borderRadius={20}
-      m="2"
-      overflow={"clip"}
       display="flex"
+      direction={"column"}
+      justifyContent={"center"}
     >
+      <Stack h="250" w="200" p="2" m="2">
+        <Image
+          src={img}
+          borderRadius="lg"
+          maxH={"100vh"}
+          maxW={"100vw"}
+          border="2px solid gray"
+        />
+      </Stack>
       <Container>
-        <Image src={img} borderRadius="lg" />
-      </Container>
-      <Container>
-        <Heading
-          as="h2"
-          color="whiteAlpha.900"
-          textTransform="capitalize"
-          fontFamily="Teko, sans-serif"
-        >
+        <Text color="whiteAlpha.900" textTransform="capitalize" fontSize="3xl">
           {name}
-        </Heading>
+        </Text>
         {tech &&
-          tech.map((tech) => {
+          tech.map((tech, index) => {
             return (
               <Badge
                 ml="1"
-                colorScheme="orange"
-                color="brand.100"
-                key={uuidv4()}
+                colorScheme="gray"
+                color={useColorModeValue("gray.900", "whitesmoke")}
+                key={index}
+                borderRadius="full"
               >
                 {tech}
               </Badge>
             );
           })}
       </Container>
-      <Button
-        colorScheme="orange"
-        m="3"
-        p="3"
-        onClick={() => console.log(url)}
-        _hover={{ bg: "brand.100" }}
-      >
-        view
-      </Button>
+      <Link href={url} textDecoration="none">
+        <Button
+          bg={useColorModeValue("blue.400", "gray.300")}
+          color={useColorModeValue("whiteAlpha.900", "gray.900")}
+          variant="solid"
+          ml={4}
+        >
+          view
+        </Button>
+      </Link>
     </Stack>
   );
 }

@@ -2,7 +2,7 @@ export const project = [
   {
     name: "App Pokemon",
     deploy: false,
-    img: "../../img/App-pokemon.png",
+    img: "./App-pokemon.png?url",
     url: "https://youtu.be/uBZSd2uPU9U",
     tech: [
       "sequelize",
@@ -18,7 +18,7 @@ export const project = [
   {
     name: "Bookflix",
     deploy: true,
-    img: "../../img/bookflix.png",
+    img: "./bookflix.png?url",
     url: "https://booksflix.vercel.app/",
     tech: [
       "Prisma",
@@ -37,14 +37,14 @@ export const project = [
   {
     name: "ToDo",
     deploy: true,
-    img: "../../img/todo.png",
+    img: "./todo.png?url",
     url: "https://todo-drab-five.vercel.app/",
     tech: ["react js", "css3", "html 5"],
   },
   {
     name: "AppPokemon React Native",
     deploy: false,
-    img: "../../img/AppPokemonReact.png",
+    img: "./AppPokemonReact.png?url",
     url: "https://www.youtube.com/watch?v=Za_VcAojAvU",
     tech: [
       "Prisma",
@@ -59,7 +59,7 @@ export const project = [
   {
     name: "code-challenge",
     deploy: true,
-    img: "../../img/Code-challenge.png",
+    img: "./Code-challenge.png?url",
     url: "https://code-challenge-opal.vercel.app/",
     tech: [
       "express js",

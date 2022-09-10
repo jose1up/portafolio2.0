@@ -1,16 +1,30 @@
-import { Container, Stack, Text } from "@chakra-ui/react";
+import { Container, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { project } from "../../db/db";
+import Carousel from "react-elastic-carousel";
+import ProfectsCard from "./ProfectsCard";
 
 export default function ContainerProjects() {
-  const [items, setitems] = useState([
-    { id: 1, title: "item #1" },
-    { id: 2, title: "item #2" },
-    { id: 3, title: "item #3" },
-    { id: 4, title: "item #4" },
-    { id: 5, title: "item #5" },
-  ]);
-  console.log(items);
-
-  return <Stack></Stack>;
+  const breakPoints = [
+    { with: 1, itemsToShow: 1 },
+    { with: 550, itemsToShow: 2 },
+    { with: 768, itemsToShow: 3 },
+    { with: 1200, itemsToShow: 4 },
+  ];
+  return (
+    <>
+      <Text id="project" textTransform="capitalize" fontSize="4xl" fontWeight="bold" color={useColorModeValue("whiteAlpha.900","gray.900")}>project | {project.length}</Text>
+      <Carousel breakPoints={breakPoints} autoPlaySpeed="5000" enableAutoPlay="true"  >
+        {project.map((p, index) => (
+          <ProfectsCard
+            key={index}
+            img={p.img}
+            name={p.name}
+            url={p.url}
+            tech={p.tech}
+          />
+        ))}
+      </Carousel>
+    </>
+  );
 }

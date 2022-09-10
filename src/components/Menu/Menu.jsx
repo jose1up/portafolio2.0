@@ -35,7 +35,7 @@ export default function Menu() {
   let colorHover = useColorModeValue("brand.100", "blue.700");
 
   return (
-    <Stack position="fixed" m="2" right="0" top="0" zIndex="1">
+    <Stack position="fixed" m="2" pr={"3.5"} right="0" top="0" zIndex="1">
       <IconButton
         icon={<HamburgerIcon />}
         ref={btnRef}
