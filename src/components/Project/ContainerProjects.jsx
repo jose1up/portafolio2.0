@@ -13,8 +13,20 @@ export default function ContainerProjects() {
   ];
   return (
     <>
-      <Text id="project" textTransform="capitalize" fontSize="4xl" fontWeight="bold" color={useColorModeValue("whiteAlpha.900","gray.900")}>project | {project.length}</Text>
-      <Carousel breakPoints={breakPoints} autoPlaySpeed="5000" enableAutoPlay="true"  >
+      <Text
+        id="project"
+        textTransform="capitalize"
+        fontSize="4xl"
+        fontWeight="bold"
+        color={useColorModeValue("whiteAlpha.900", "gray.900")}
+      >
+        project | {project.length}
+      </Text>
+      <Carousel
+        breakPoints={breakPoints}
+        autoPlaySpeed="5000"
+        enableAutoPlay="true"
+      >
         {project.map((p, index) => (
           <ProfectsCard
             key={index}

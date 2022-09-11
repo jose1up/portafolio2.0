@@ -22,10 +22,10 @@ export default function ProfectsCard({ img, tech, url, name }) {
       direction={"column"}
       justifyContent={"center"}
     >
-      <Stack h="250" w="200" p="2" m="2">
+      <Stack h="250" w="190" p="2" m="2">
         <Image
           src={img}
-          borderRadius="lg"
+          borderRadius="xl"
           maxH={"100vh"}
           maxW={"100vw"}
           border="2px solid gray"

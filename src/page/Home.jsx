@@ -21,7 +21,7 @@ export default function Home() {
         fontSize="2xl"
         className="animate__animated animate__backInDown" 
       >
-        Hi, Iam
+        Hi, I am
       </Text>
       <Text
         className="animate__animated animate__backInRight"
