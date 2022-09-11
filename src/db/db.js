@@ -71,6 +71,18 @@ export const project = [
       "bootstrap",
     ],
   },
+  {
+    name: "portafolio",
+    deploy: true,
+    img: "./portafolio.png?url",
+    url: "https://portafolio-six-pink.vercel.app/",
+    tech: [
+      "react js",
+      "css3",
+      "html 5",
+      "redux",
+    ],
+  },
 ];
 
 
