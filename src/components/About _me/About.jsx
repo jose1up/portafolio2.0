@@ -40,7 +40,10 @@ export default function About() {
             empresa que me ayude a crecer tanto en lo profesional como en lo
             personal. La experiencia que tengo en este momento es académica
             desde construcción de api rest , página spa hasta aplicaciones
-            móviles.
+            móviles.Estoy cursando actualmente la carrera de ingenieria en
+            informática en la universidad nacional Arturo Jauretche. y soy
+            graduado de bootcamp soy henry con el título desarrollador full
+            stack
           </Text>
         </Box>
 
