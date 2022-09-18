@@ -6,11 +6,14 @@ import {
   Link,
   IconButton,
   useColorModeValue,
+  Button,
+  Tooltip,
 } from "@chakra-ui/react";
 import React from "react";
 import photoPerfil from "../../../img/photoPerfil.jpg";
 import s from "./About.module.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import cv from "../../../public/Desarrollado full stack José Miguel Alcaraz.pdf?url"
 
 export default function About() {
   return (
@@ -57,13 +60,16 @@ export default function About() {
                 src={photoPerfil}
                 alt="Avatar"
               />
-              <Link
-                mx={2}
-                fontWeight="bold"
-                color={useColorModeValue("whiteAlpha.900", "whiteAlpha.500")}
-              >
-                Jose Miguel Alcaraz
-              </Link>
+              <Tooltip hasArrow label='Click download CV ' bg='gray.300' color='black'>
+                <Link
+                  mx={2}
+                  fontWeight="bold"
+                  color={useColorModeValue("whiteAlpha.900", "whiteAlpha.500")} 
+                  href={cv}
+                >
+                  Jose Miguel Alcaraz
+                </Link>
+              </Tooltip>
             </Flex>
           </Flex>
         </Box>
