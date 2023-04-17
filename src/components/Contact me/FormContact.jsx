@@ -31,7 +31,7 @@ const templateParams = import.meta.env.VITE_TEMPLATE_PARAMS_EMAIL_JS;
 export default function FormContact() {
   const colorFont = useColorModeValue("whiteAlpha.900", "gray.900");
   const IconHover = useColorModeValue("blue.500","gray.300")
-  const { hasCopied, onCopy } = useClipboard("josealcaraz022@gmail.com");
+  const { hasCopied, onCopy } = useClipboard("jose.miguel.alcaraz.1992@gmail.com");
   const form = useRef();
   const toast = useToast();
   const colorIcon = useColorModeValue("whiteAlpha.900", "gray.900");
